@@ -6,8 +6,12 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorPortfolio", "BlazorPortfolio\BlazorPortfolio.csproj", "{EFD51A6F-866B-46F7-B63E-A24E24DF5D79}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{8EC462FD-D22E-90A8-E5CE-7E832BA40C5D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".github", ".github", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "workflows", "workflows", "{D03789A1-C381-40BE-B4CC-3144FF5DC16D}"
 	ProjectSection(SolutionItems) = preProject
-		vercel.json = vercel.json
+		deploy.yml = deploy.yml
 	EndProjectSection
 EndProject
 Global
@@ -23,6 +27,9 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{D03789A1-C381-40BE-B4CC-3144FF5DC16D} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {8BEEA251-3002-4AFD-BC80-9823FF2339E0}

@@ -1,0 +1,29 @@
+﻿name: Deploy Blazor to Vercel
+
+on:
+  push:
+    branches: [ "main" ] # จะทำงานทุกครั้งที่ Push เข้า Branch main
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '8.0.x' # ตรวจสอบเวอร์ชันให้ตรงกับโปรเจกต์คุณ
+
+      - name: Publish
+        # แก้ไข Path ตรง Portfolio/Portfolio/Portfolio.csproj ให้ตรงกับที่อยู่ใน GitHub จริงๆ
+        run: dotnet publish Portfolio/Portfolio/Portfolio.csproj -c Release -o release
+
+      - name: Deploy to Vercel
+        uses: amondnet/vercel-action@v20
+        with:
+          vercel-token: ${{ secrets.VERCEL_TOKEN }}
+          vercel-org-id: ${{ secrets.VERCEL_ORG_ID }}
+          vercel-project-id: ${{ secrets.PROJECT_ID }}
+          vercel-args: '--prod'
+          working-directory: ./release/wwwroot
