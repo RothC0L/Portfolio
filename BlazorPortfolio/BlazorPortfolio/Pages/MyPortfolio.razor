@@ -1,0 +1,286 @@
+﻿@page "/"
+@inject IJSRuntime JSRuntime
+
+<PageTitle>Picha - Full Stack Developer</PageTitle>
+
+<section class="hero-section">
+    <img src="image/cyber.jpg" alt="Cybersecurity Banner" class="hero-img" />
+    <div class="hero-overlay">
+        <h1 class="hero-name">Picha Patraneramit</h1>
+        <h2 class="hero-title">Full Stack Developer</h2>
+        <a href="#about" class="hero-btn" @onclick="@(() => ScrollToSection("about"))">
+            About Me
+            <i class="bi bi-arrow-down ms-2"></i>
+        </a>
+    </div>
+</section>
+
+<div class="portfolio-container">
+    <!-- Sidebar -->
+    <aside class="portfolio-sidebar">
+        <div class="sidebar-content">
+
+            <nav class="nav-section">
+                <a href="#about" class="nav-link active" @onclick="@(() => ScrollToSection("about"))">
+                    <span class="nav-indicator"></span>
+                    <span class="nav-text">ABOUT</span>
+                </a>
+                <a href="#experience" class="nav-link" @onclick="@(() => ScrollToSection("experience"))">
+                    <span class="nav-indicator"></span>
+                    <span class="nav-text">EXPERIENCE</span>
+                </a>
+                <a href="#projects" class="nav-link" @onclick="@(() => ScrollToSection("projects"))">
+                    <span class="nav-indicator"></span>
+                    <span class="nav-text">PROJECTS</span>
+                </a>
+            </nav>
+
+            <div class="social-links">
+                <a href="https://github.com/RothC0L" target="_blank" class="social-link">
+                    <i class="bi bi-github"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/picha-patraneramit/" target="_blank" class="social-link">
+                    <i class="bi bi-linkedin"></i>
+                </a>
+            </div>
+        </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- About Section -->
+        <section id="about" class="content-section">
+            <div class="section-content">
+                <div class="about-container">
+                    <div class="about-image">
+                        <img src="image/me.jpg" alt="Picha Patraneramit" />
+                    </div>
+                    <div class="about-text">
+                        <p class="mb-4">
+                            Full Stack Developer with 2+ years of experience building enterprise web, mobile, and kiosk systems using C#, .NET, SQL Server, and RESTful APIs.
+                            Experienced in large-scale API design, system modernization, and secure payment and hardware integration, with strong end-to-end delivery
+                            and a Master's focus in Cybersecurity, including a thesis on penetration testing and OWASP-based vulnerability mitigation.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="content-section">
+            <div class="section-content">
+                <div class="experience-item">
+                    <div class="timeline">Mar 2024 — PRESENT</div>
+                    <div class="experience-content">
+                        <h3 class="experience-title">
+                            Full-Stack Developer, meeSoft Co, Ltd.
+                            @* <i class="bi bi-arrow-up-right ms-2"></i> *@
+                        </h3>
+                        <ul class="experience-description custom-bullets">
+                            <li>Designed and deployed 39+ RESTful API endpoints to support extensive building management features and user services for a large-scale public community mobile application.</li>
+                            <li>Developed 5 core RESTful API endpoints using C# & LINQ for Smart Locker system, enhancing secure package handling for a premium residential condominium.</li>
+                            <li>Led the migration of a legacy mobile application from Xamarin to .NET MAUI, restoring availability on the Google Play Store and ensuring full compatibility with the latest Android OS, while reducing long-term maintenance risks.</li>
+                            <li>Engineered specialized libraries to connect EDC hardware with 2 Major Thai Banks and 1 International Bank, alongside integrating third-party payment gateways for secure web transactions.</li>
+                            <li>Managed the Access Control System for a top-ranked university in Thailand, overseeing hardware configuration (Board IPs/Security Zones) and implementing granular user permission protocols.</li>
+                            <li>Built and deployed an Automated Server Monitoring Service with real-time API tracking and SMTP alerts, significantly reducing system downtime.</li>
+                            <li>Developed an Automated Cleanup Bot for server storage management, including pre-and-post disk space analysis and automated reporting, reducing manual maintenance by 90%.</li>
+                            <li>Led end-to-end development and implementation of an interactive kiosk system for a world-class indoor playground in Thailand, using Unity, C# for an interactive front-end and C# with RESTful APIs, LINQ, and SQL Server for backend services and data management.</li>
+                        </ul>
+                        <div class="tech-tags">
+                            <span class="tech-tag">C# .NET</span>
+                            <span class="tech-tag">LINQ</span>
+                            <span class="tech-tag">SQL Server</span>
+                            <span class="tech-tag">.NET MAUI</span>
+                            <span class="tech-tag">Unity Game Engine</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="experience-item">
+                    <div class="timeline">Nov 2023 - Feb 2024</div>
+                    <div class="experience-content">
+                        <h3 class="experience-title">
+                            .NET Developer, PRO BIZ SOFT Co., Ltd.
+                            @* <i class="bi bi-arrow-up-right ms-2"></i> *@
+                        </h3>
+                        <ul class="experience-description custom-bullets">
+                            <li>Developed and maintained front-end web applications using C#.NET, React, TypeScript, Node.js, HTML, and CSS to support business operations and implemented responsive, UX/UI-compliant user interactions and interfaces.</li>
+                            <li>Troubleshot and resolved application issues to ensure stability and performance.</li>
+                        </ul>
+                        <div class="tech-tags">
+                            <span class="tech-tag">ReactTS</span>
+                            <span class="tech-tag">Typescript</span>
+                            <span class="tech-tag">C#</span>
+                        </div>
+                    </div>
+                </div>
+                <a href="doc/resume.pdf" class="view-resume" target="_blank">
+                    View Full Resume <i class="bi bi-arrow-right ms-2"></i>
+                </a>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="content-section">
+            <div class="section-content">
+
+                <div class="project-item">
+                    <div class="project-image">
+                        <img src="image\supalai.jpg" alt="Project 1" />
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">
+                            Smart locker Supalai Icon Sathorn
+                            @* <i class="bi bi-arrow-up-right ms-2"></i> *@
+                        </h3>
+                        <p class="project-description">
+                            Develop the backend functionality for an automatic locker system. Users can reserve a locker using a condo-issued card or scanning a QR code.
+                            For added security, users can set a password for the locker.
+                        </p>
+                        <div class="tech-tags">
+                            <span class="tech-tag">C# .NET</span>
+                            <span class="tech-tag">LINQ</span>
+                            <span class="tech-tag">SQL Server</span>
+                            <span class="tech-tag">RESTful API</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-item">
+                    <div class="project-image">
+                        <img src="image\parksilomapp.jpg" alt="Project 2" />
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">
+                            Mobile Application Park Silom
+                            @* <i class="bi bi-arrow-up-right ms-2"></i> *@
+                        </h3>
+                        <p class="project-description">
+                            Designed and deployed 39+ RESTful API endpoints to support extensive building management features and user services for a large-scale public community mobile application.
+                        </p>
+                        <div class="tech-tags">
+                            <span class="tech-tag">C# .NET</span>
+                            <span class="tech-tag">LINQ</span>
+                            <span class="tech-tag">SQL Server</span>
+                            <span class="tech-tag">RESTful API</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-item">
+                    <div class="project-image">
+                        <img src="image\harborland.jpg" alt="Project 3" />
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">
+                            Harborland Kiosk
+                            @* <i class="bi bi-arrow-up-right ms-2"></i> *@
+                        </h3>
+                        <p class="project-description">
+                            Led end-to-end development and implementation of an interactive kiosk system for a world-class indoor playground in Thailand, using Unity, 
+                            C# for an interactive front-end and C# with RESTful APIs, LINQ, and SQL Server for backend services and data management.
+                        </p>
+                        <div class="tech-tags">
+                            <span class="tech-tag">Unity Game Engine</span>
+                            <span class="tech-tag">C# .NET</span>
+                            <span class="tech-tag">LINQ</span>
+                            <span class="tech-tag">SQL Server</span>
+                            <span class="tech-tag">RESTful API</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-item">
+                    <div class="project-image">
+                        <img src="image\dsport.jpg" alt="Project 4" />
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">
+                            Dsport Mobile Application
+                            @* <i class="bi bi-arrow-up-right ms-2"></i> *@
+                        </h3>
+                        <p class="project-description">
+                            Led the migration of a legacy mobile application from Xamarin to .NET MAUI, restoring availability on the Google Play Store and ensuring full compatibility with the latest Android OS, 
+                            while reducing long-term maintenance risks.
+                        </p>
+                        <div class="tech-tags">
+                            <span class="tech-tag">.NET MAUI</span>
+                            <span class="tech-tag">XAML</span>
+                            <span class="tech-tag">C# .NET</span>
+                            <span class="tech-tag">LINQ</span>
+                            <span class="tech-tag">SQL Server</span>
+                            <span class="tech-tag">RESTful API</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-item wide-image">
+                    <div class="project-image">
+                        <img src="image\thesis.png" alt="Project Thesis" />
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">
+                            Thesis on Enhancing Web Application Security in Thai Hospitals through Vulnerability Assessment, Penetration Testing and OWASP-Based Vulnerability Mitigation
+                            @* <i class="bi bi-arrow-up-right ms-2"></i> *@
+                        </h3>
+                        <p class="project-description">
+                            This study aims to enhance web application security in Thai hospitals through vulnerability assessment, penetration testing and vulnerability mitigation based on OWASP guidelines.<br />
+                            A prototype hospital web application was developed to simulate real-world environments for penetration testing, vulnerability assessment according to CVSS v4.0.
+                        </p>
+                        <div class="tech-tags">
+                            <span class="tech-tag">ASP.NET Core Razor Pages</span>
+                            <span class="tech-tag">C# .NET</span>
+                            <span class="tech-tag">Azure SQL Database</span>
+                            <span class="tech-tag">Kali Linux</span>
+                            <span class="tech-tag">OWASP ZAP</span>
+                            <span class="tech-tag">Nikto</span>
+                            <span class="tech-tag">CloudFlare</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-item">
+                    <div class="project-image">
+                        <img src="image\ai.jpg" alt="Project AI" />
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">
+                            Computer Vision: Rice Grain Variety Detection using YOLOv8
+                            @* <i class="bi bi-arrow-up-right ms-2"></i> *@
+                        </h3>
+                        <p class="project-description">
+                            Developed a high-precision Computer Vision solution using YOLOv8 to automate the classification of rice grain varieties, specifically distinguishing between Pathumthani Fragrant Rice 1 and SunPaTong Sticky Rice.
+                        </p>
+                        <div class="tech-tags">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">YOLOv8</span>
+                            <span class="tech-tag">Ultralytics</span>
+                            <span class="tech-tag">IPython</span>
+                            <span class="tech-tag">LabelImg</span>
+                        </div>
+                    </div>
+                </div>
+
+                @*                 <a href="/projects" class="view-archive">
+                    View Full Project Archive <i class="bi bi-arrow-right ms-2"></i>
+                </a> *@
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>
+                Built with <a href="https://dotnet.microsoft.com/apps/aspnet/web-apps/blazor" target="_blank" class="inline-link">Blazor</a>
+                and <a href="https://getbootstrap.com/" target="_blank" class="inline-link">Bootstrap</a>.
+                Deployed on <a href="https://vercel.com" target="_blank" class="inline-link">Vercel</a>.
+            </p>
+        </footer>
+    </main>
+</div>
+
+@code {
+    private async Task ScrollToSection(string sectionId)
+    {
+        await JSRuntime.InvokeVoidAsync("scrollToSection", sectionId);
+    }
+}
