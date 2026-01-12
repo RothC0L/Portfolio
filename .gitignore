@@ -417,3 +417,6 @@ appsettings.*.json
 **/appsettings.Development.json
 **/appsettings.Production.json
 launchSettings.json
+
+# ปลดล็อคให้ Git มองเห็นโฟลเดอร์ Actions
+!/.github/
