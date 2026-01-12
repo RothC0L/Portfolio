@@ -15,6 +15,6 @@
 			<CopyToOutputDirectory>Never</CopyToOutputDirectory>
 			<CopyToPublishDirectory>Never</CopyToPublishDirectory>
 		</None>
+		<Content Remove="vercel.json" />
 	</ItemGroup>
-
 </Project>
