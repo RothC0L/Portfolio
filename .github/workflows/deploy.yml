@@ -17,8 +17,7 @@ jobs:
 
       - name: Publish
         # ใช้ Path ตามโฟลเดอร์ในภาพ image_773716.png
-        run: dotnet publish BlazorPortfolio/BlazorPortfolio.csproj -c Release -o release
-
+        run: dotnet publish BlazorPortfolio/BlazorPortfolio/BlazorPortfolio.csproj -c Release -o release
       - name: Deploy to Vercel
         uses: amondnet/vercel-action@v20
         with:
