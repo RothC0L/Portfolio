@@ -1,12 +1,8 @@
 {
-  "cleanUrls": true,
-  "trailingSlash": false,
+  "framework": null,
   "routes": [
     {
-      "handle": "filesystem"
-    },
-    {
-      "src": "/.*",
+      "src": "/(.*)",
       "dest": "/index.html"
     }
   ]
