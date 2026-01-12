@@ -1,21 +1,12 @@
 {
-  "buildCommand": "cd BlazorPortfolio && dotnet publish -c Release -o ../output",
-  "outputDirectory": "output/wwwroot",
-  "framework": null,
-  "installCommand": "echo 'Skipping install'",
+  "cleanUrls": true,
+  "trailingSlash": false,
   "routes": [
-    {
-      "src": "/(.*\\.(wasm|dll|pdb|json|dat|blat|br|gz))",
-      "headers": {
-        "Cache-Control": "public, max-age=31536000, immutable"
-      },
-      "dest": "/$1"
-    },
     {
       "handle": "filesystem"
     },
     {
-      "src": "/(.*)",
+      "src": "/.*",
       "dest": "/index.html"
     }
   ]
